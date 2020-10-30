@@ -31,7 +31,6 @@ def solution(n):
             i-=2
             continue
     for i in range(len(arr)):
-        # print(arr[i])
         for j in range(len(arr[i])):
             if arr[i][j] != 0:
                 answer.append(arr[i][j])
@@ -40,19 +39,17 @@ def solution(n):
     return answer
 def same_col(arr, idx, n):
     x, y, count = idx
-    # print("same_col", idx)
     for i in range(count):
         arr[x+i][y] = n
         n+=1
 def same_row(arr, idx, n):
-    x, y, count = idx
+    x, y, count = id
     # print('same_row', idx)
     for i in range(count):
         arr[x][y+i] = n
         n+=1
 def both_decrease(arr, idx, n):
     x, y, count = idx
-    # print('both', idx)
     for i in range(count):
         arr[x-i][y-i] = n
         n+=1
